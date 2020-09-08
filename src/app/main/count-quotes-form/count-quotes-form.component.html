@@ -1,0 +1,8 @@
+<nb-card>
+  <nb-card-header (click)="open()">Select 'count' Quotes</nb-card-header>
+  <nb-card-body *ngIf="show">
+    <nb-select placeholder="1..10" [formControl]="form">
+      <nb-option *ngFor="let value of values" [value]="value" (click)="setCount()">{{value}}</nb-option>
+    </nb-select>
+  </nb-card-body>
+</nb-card>

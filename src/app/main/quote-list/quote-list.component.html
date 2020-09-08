@@ -1,0 +1,12 @@
+<ngx-count-quotes-form
+  [count]="10"
+  [formValue]="formValue"
+  (formOpen)="formOpen()"
+  (countChanged)="onCount($event)"
+>
+</ngx-count-quotes-form>
+<ngx-list [keyName]="'quote'" [list]="list$|async" [rowTemplate]="template">
+</ngx-list>
+<ng-template #template let-row let-selected="selected">
+  <ngx-quote [quote]="row" [selected]="selected" (setCharacter)="onSetCharacter($event)"></ngx-quote>
+</ng-template>

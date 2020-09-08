@@ -1,0 +1,5 @@
+<p>{{quote.quote}}</p>
+<ng-container *ngIf="selected">
+  <p (click)="setCharacter.emit(quote)">{{quote.character}}</p>
+  <img [src]="imageUrl" alt="quote image">
+</ng-container>
