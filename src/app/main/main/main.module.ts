@@ -6,7 +6,7 @@ import {CountQuotesFormComponent} from '../count-quotes-form/count-quotes-form.c
 import {ListComponent} from '../list/list.component';
 import {QuoteComponent} from '../quote/quote.component';
 import {CharacterComponent} from '../character/character.component';
-import {NbButtonModule, NbCardModule, NbSelectModule} from '@nebular/theme';
+import {NbButtonModule, NbCardModule, NbIconModule, NbSelectModule} from '@nebular/theme';
 import {ReactiveFormsModule} from '@angular/forms';
 
 
@@ -17,13 +17,14 @@ import {ReactiveFormsModule} from '@angular/forms';
     ListComponent,
     QuoteComponent,
     CharacterComponent],
-  imports: [
-    CommonModule,
-    NbCardModule,
-    NbSelectModule,
-    ReactiveFormsModule,
-    NbButtonModule,
-  ],
+    imports: [
+        CommonModule,
+        NbCardModule,
+        NbSelectModule,
+        ReactiveFormsModule,
+        NbButtonModule,
+        NbIconModule,
+    ],
   exports: [
     ListComponent,
     QuoteComponent

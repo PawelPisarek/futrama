@@ -4,12 +4,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Characters (V2)',
     icon: 'people-outline',
-    link: '/pages/dashboard',
+    link: '/pages/characters',
     home: true,
   },
   {
     title: 'Quotes By Characters',
     icon: 'volume-up-outline',
-    link: '/pages/iot-dashboard',
+    link: '/pages/quotes-by-characters',
   },
 ];

@@ -13,10 +13,10 @@ const routes: Routes = [{
   component: PagesComponent,
   children: [
     {
-      path: 'dashboard',
+      path: 'characters',
       component: CharacterListComponent,
     }, {
-      path: 'iot-dashboard',
+      path: 'quotes-by-characters',
       component: QuoteListComponent,
       resolve: {[UrlStatic.QUERY]: QuoteResolverService},
     },
