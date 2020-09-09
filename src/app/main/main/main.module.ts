@@ -27,8 +27,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     ],
   exports: [
     ListComponent,
-    QuoteComponent
-  ]
+    QuoteComponent,
+  ],
 })
 export class MainModule {
 }
