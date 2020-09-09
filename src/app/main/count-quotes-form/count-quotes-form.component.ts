@@ -3,7 +3,7 @@ import {FormControl} from '@angular/forms';
 import {UrlStatic} from '../quote-list/navigate/url.static';
 
 @Component({
-  selector: 'ngx-count-quotes-form',
+  selector: 'futurama-count-quotes-form',
   templateUrl: './count-quotes-form.component.html',
   styleUrls: ['./count-quotes-form.component.scss'],
 })

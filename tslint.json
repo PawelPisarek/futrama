@@ -36,7 +36,6 @@
       true,
       120
     ],
-    "no-multi-spaces": true,
     "member-access": false,
     "no-arg": true,
     "no-console": [
@@ -108,13 +107,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "ngx",
+      "futurama",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "ngx",
+      "futurama",
       "kebab-case"
     ],
     "ban": [

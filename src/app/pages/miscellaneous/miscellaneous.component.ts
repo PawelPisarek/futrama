@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'ngx-miscellaneous',
+  selector: 'futurama-miscellaneous',
   template: `
     <router-outlet></router-outlet>
   `,

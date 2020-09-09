@@ -1,14 +1,11 @@
-<ng-container *ngFor="let row of characters; let i = index">
-  <div (click)="onSelect(row)">
+<ng-container *ngFor="let row of list; let i = index">
     <ng-container
       *ngTemplateOutlet="rowTemplate || defaultTemplate; context: {
                 $implicit: row,
-                index: i,
-                 selected: selectedList.get(row[keyName])
+                index: i
                  }"
     >
     </ng-container>
-  </div>
 </ng-container>
 <ng-template
   #defaultTemplate

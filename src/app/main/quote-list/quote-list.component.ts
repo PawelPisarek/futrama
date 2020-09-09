@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, TemplateRef} from '@angular/core';
 import {merge, Observable, of, Subject} from 'rxjs';
 import {QuotesService} from './quotes.service';
 import {QuotesModel} from '../quotes.model';
@@ -8,9 +8,11 @@ import {CharacterParam} from './navigate/character.param';
 import {QueryInterface} from './navigate/query.interface';
 import {catchError, map, mergeMap, tap} from 'rxjs/operators';
 import {UrlStatic} from './navigate/url.static';
+import {NbDialogService} from '@nebular/theme';
+import {FiveQuotesCharacterComponent} from '../five-quotes-character/five-quotes-character.component';
 
 @Component({
-  selector: 'ngx-quote-list',
+  selector: 'futurama-quote-list',
   templateUrl: './quote-list.component.html',
   styleUrls: ['./quote-list.component.scss'],
 })
@@ -18,10 +20,10 @@ export class QuoteListComponent implements OnInit {
   list$: Observable<QuotesModel[]>;
   query: QueryInterface;
   formValue: number;
-  show: boolean;
   refreshList$ = new Subject();
 
-  constructor(private quotesService: QuotesService, private router: Router, private route: ActivatedRoute) {
+  constructor(private quotesService: QuotesService, private router: Router, private route: ActivatedRoute,
+              private dialogService: NbDialogService) {
   }
 
   ngOnInit(): void {
@@ -37,8 +39,17 @@ export class QuoteListComponent implements OnInit {
   }
 
   onSetCharacter(quotes: QuotesModel) {
-    this.refreshList$.next(new CountParam(this.query.getParams()[UrlStatic.COUNT], new CharacterParam(quotes)));
-    this.addParametersToUrl();
+    // this.refreshList$.next(new CountParam(this.query.getParams()[UrlStatic.COUNT], new CharacterParam(quotes)));
+    // this.addParametersToUrl(); // add character to url and get list
+
+    this.dialogService.open(
+      FiveQuotesCharacterComponent,
+      {
+        context: {
+          title: quotes.character,
+          quotes,
+        },
+      });
   }
 
   onCount(count: number) {

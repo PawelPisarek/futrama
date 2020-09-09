@@ -4,13 +4,12 @@ import {NbMediaBreakpoint, NbMediaBreakpointsService, NbThemeService} from '@neb
 import {takeWhile} from 'rxjs/operators';
 
 @Component({
-  selector: 'ngx-quote',
+  selector: 'futurama-quote',
   templateUrl: './quote.component.html',
   styleUrls: ['./quote.component.scss'],
 })
 export class QuoteComponent implements OnInit, OnDestroy {
   @Input() quote: QuotesModel;
-  @Input() selected: boolean;
   @Output() setCharacter = new EventEmitter();
   imageUrl: string;
   private alive = true;

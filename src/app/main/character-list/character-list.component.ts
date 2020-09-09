@@ -4,7 +4,7 @@ import {Observable} from 'rxjs';
 import {CharactersService} from '../list/characters.service';
 
 @Component({
-  selector: 'ngx-character-list',
+  selector: 'futurama-character-list',
   templateUrl: './character-list.component.html',
   styleUrls: ['./character-list.component.scss'],
 })

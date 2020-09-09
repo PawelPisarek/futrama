@@ -15,7 +15,6 @@ export class CharactersService {
   getList(): Observable<CharactersModel[]> {
     return this.http.get('http://futuramaapi.herokuapp.com/api/v2/characters')
       .pipe(map((charactersModel: CharactersModel[]) => {
-        console.log(charactersModel);
         return charactersModel.map(character => {
           return new CharactersModel(
             character.Species,

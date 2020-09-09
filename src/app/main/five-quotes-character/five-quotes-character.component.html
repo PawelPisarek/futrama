@@ -1,0 +1,13 @@
+<nb-card>
+  <nb-card-header><h5>{{ title }}</h5></nb-card-header>
+  <nb-card-body>
+    <futurama-list [keyName]="'quote'" [list]="list$|async" [rowTemplate]="template">
+    </futurama-list>
+    <ng-template #template let-row>
+      <p class="quote-preview p-2">{{row.quote}}</p>
+    </ng-template>
+  </nb-card-body>
+  <nb-card-footer>
+    <button nbButton hero status="primary" (click)="dismiss()">Dismiss Modal</button>
+  </nb-card-footer>
+</nb-card>

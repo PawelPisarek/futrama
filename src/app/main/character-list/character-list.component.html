@@ -1,5 +1,5 @@
-<ngx-list [keyName]="'Name'" [list]="list$|async" [rowTemplate]="template">
-</ngx-list>
-<ng-template #template let-row  let-selected="selected">
-  <ngx-character [charactersModel]="row" [selected]="selected"></ngx-character>
+<futurama-list [keyName]="'Name'" [list]="list$|async" [rowTemplate]="template">
+</futurama-list>
+<ng-template #template let-row >
+  <futurama-character [charactersModel]="row"></futurama-character>
 </ng-template>

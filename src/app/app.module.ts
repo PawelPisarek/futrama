@@ -3,34 +3,29 @@
  * Copyright Akveo. All Rights Reserved.
  * Licensed under the MIT License. See License.txt in the project root for license information.
  */
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { CoreModule } from './@core/core.module';
-import { ThemeModule } from './@theme/theme.module';
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NgModule} from '@angular/core';
+import {CoreModule} from './@core/core.module';
+import {ThemeModule} from './@theme/theme.module';
+import {AppComponent} from './app.component';
+import {AppRoutingModule} from './app-routing.module';
 import {
+  NbButtonModule,
   NbCardModule,
-  NbChatModule,
   NbDatepickerModule,
   NbDialogModule,
-  NbMenuModule, NbSelectModule,
+  NbMenuModule,
+  NbSelectModule,
   NbSidebarModule,
-  NbToastrModule,
   NbWindowModule,
 } from '@nebular/theme';
-import { ListComponent } from './main/list/list.component';
-import { CharacterComponent } from './main/character/character.component';
-import { CharacterListComponent } from './main/character-list/character-list.component';
-import { QuoteListComponent } from './main/quote-list/quote-list.component';
-import { QuoteComponent } from './main/quote/quote.component';
-import {ReactiveFormsModule} from '@angular/forms';
-import { CountQuotesFormComponent } from './main/count-quotes-form/count-quotes-form.component';
+import {HttpClientModule} from '@angular/common/http';
+import {MainModule} from './main/main/main.module';
+import { FiveQuotesCharacterComponent } from './main/five-quotes-character/five-quotes-character.component';
 
 @NgModule({
-  declarations: [AppComponent, ListComponent, CharacterComponent, CharacterListComponent, QuoteListComponent, QuoteComponent, CountQuotesFormComponent],
+  declarations: [AppComponent, FiveQuotesCharacterComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -41,15 +36,12 @@ import { CountQuotesFormComponent } from './main/count-quotes-form/count-quotes-
     NbDatepickerModule.forRoot(),
     NbDialogModule.forRoot(),
     NbWindowModule.forRoot(),
-    NbToastrModule.forRoot(),
-    NbChatModule.forRoot({
-      messageGoogleMapKey: 'AIzaSyA_wNuCzia92MAmdLRzmqitRGvCF7wCZPY',
-    }),
     CoreModule.forRoot(),
     ThemeModule.forRoot(),
-    ReactiveFormsModule,
+    MainModule,
     NbCardModule,
     NbSelectModule,
+    NbButtonModule,
   ],
   bootstrap: [AppComponent],
 })
