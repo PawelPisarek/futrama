@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {QuoteListComponent} from '../quote-list/quote-list.component';
 import {CharacterListComponent} from '../character-list/character-list.component';
 import {CountQuotesFormComponent} from '../count-quotes-form/count-quotes-form.component';
 import {ListComponent} from '../list/list.component';
@@ -11,7 +10,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
-  declarations: [QuoteListComponent,
+  declarations: [
     CharacterListComponent,
     CountQuotesFormComponent,
     ListComponent,
@@ -27,8 +26,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     ],
   exports: [
     ListComponent,
-    QuoteComponent
-  ]
+    QuoteComponent,
+  ],
 })
 export class MainModule {
 }
